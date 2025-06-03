@@ -15,10 +15,18 @@ SECRET_KEY = st.secrets["DB_TOKEN"]
 ##############################################
 if "authenticated" not in st.session_state:
     st.session_state.authenticated = False
-
+    
 if not st.session_state.authenticated: # 아직 인증 안 됐으면 비밀번호 입력 창 보여주기
     st.title("🔐 비밀번호를 입력하세요!!")
     password = st.text_input("비밀번호", type="password")
+    st.caption("1. 0.3%만 먹어도 이득이다")
+    st.caption("2. 목표가 도달해서 매도한 종목은 다시 따라 들어가지 말자")
+    st.caption("3. 장중 시드 추가 입금 금지")
+    st.caption("4. 잘못 샀다고 인지한 즉시 시장가 매도! 반등 기다리다가 망한다")
+    st.caption("5. 원하는 종목 없을때 쉴 수 있는 것도 실력이다")
+    st.caption("6. 충동적으로 매매, 매도하면 무조건 손해본다")
+    st.caption("7. 완벽이란 없다. 자만하지 말자")
+
     if st.button("LOGIN"):
         if password == SECRET_KEY:
             st.session_state.authenticated = True
