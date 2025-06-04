@@ -44,7 +44,8 @@ else:
             techNameGap =''
             techNameFisrt = ''
             techNameGold = ''
-
+            dabger = ''
+                        
             kingScore = 0
             mamoruScore = 0
 
